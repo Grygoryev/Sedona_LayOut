@@ -6,18 +6,15 @@
 </head>
 <body>
 	<nav class="menu">
-		<div class="menu__half1"> <!-- не уверен что half1 и half2 удачные названия -->	
 			<a class="menu__link">Информация</a>
 			<a class="menu__link">Фото и видео</a>
-		</div>
-		<div class="menu__half2">
 			<a class="menu__link">Карта штата</a>
-			<a href="hotels.html" class="menu__link">Гостиницы</a>
-		</div>
+			<a class="menu__link" href="hotels.html">Гостиницы</a>
 	</nav>
-	<img class="logo-img" src="#" alt="">
+	<a><img class="logo-img" src="" alt="organisation-logo"></a>
 
 	<div class="intro">
+		<img class="intro__text" src="" alt="big-promo-text">
 	</div>
 
 	<div class="content">
@@ -31,27 +28,27 @@
 				<p class="gallery__text">-№1-</p> <!-- корркетно ли когда идут два одинаковых класс подряд? --> 
 				<p class="gallery__text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
 			</div>
-			<img class="gallery__photo" src="#">
+			<img class="gallery__photo" src="">
 		</div>
 		<div class="features">	
 			<div class="features__item">
-				<img src="#" alt="" class="features__icon">	
+				<img class="features__icon" src="" alt="features-icon">	
 				<h2 class="features__title">жилье</h2>
 				<p class="features__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 			</div>
 			<div class="features__item">
-				<img src="#" alt="" class="features__icon">
+				<img class="features__icon" src="" alt="features-icon">
 				<h2 class="features__title">еда</h2>
 				<p class="features__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>	
 			</div>
 			<div class="features__item">
-				<img src="#" alt="" class="featuress__icon">
+				<img class="features__icon" src="" alt="features-icon">
 				<h2 class="features__title">сувениры</h2>
 				<p class="features__text">Не только китайского, но и местного производства!</p>	
 			</div>
 		</div>
 		<div class="gallery">
-			<img class="gallery__photo" src="#">
+			<img class="gallery__photo" src="">
 			<div class="gallery__item">
 				<h2 class="gallery__title">там есть мост дьявола</h2>
 				<p class="gallery__text">-№2-</p>
@@ -87,33 +84,45 @@
 	</div>	
 
 	<div class="map-background">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d104770.35512980411!2d-111.795138!3d34.854378!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1512456568651" width="1200" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d104770.35512980411!2d-111.795138!3d34.854378!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1512456568651" width="1200" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-		<form class="search-form">
-			<div class="search-form__item">
-				<p>дата заезда<input type="text">24 апреля 2017<button class="calendar-btn"></button></input></p>
+			<form class="search-form" action="" method="post">
+				<div class="search-form__item">
+					<label for="check-in-date">дата заезда</label>
+					<input type="text" name="check-in-date" id="check-in-date" value="24 апреля 2017">
+					<button class="calendar-btn"></button>
+				</div>
+				<div class="search-form__item">
+					<label for="check-out-date">дата выезда</label>
+					<input type="text" name="check-out-date" id="check-out-date" value="4 июля 2017">
+					<button class="calendar-btn"></button>
+				</div>
+				<div class="search-form__people-counter">
+					<div class="adults-counter">
+						<label for="adult-value"> взрослые </label>
+						<button class="less-btn"></button>
+						<input class="people-value" type="text" name="adult-value" id="adult-value" value="2">
+						<button class="more-btn"></button>
+					</div>
+					<div class="children-counter">
+						<label for="children-value">дети</label>
+						<button class="less-btn"></button>
+						<input class="people-value" type="text" name="children-value" id="children-value" value="0">
+						<button class="more-btn"></button>
+					</div>
+				</div>
+				<input class="search-form__button" type="submit" name="find-suggestions" value="найти">
+			</form>		
+		
+			<div class="footer">
+				<a class="hashtag" href="#">#visitsedona</a>
+				<div class="social-icons">
+					<a class="social-icons__item" href="#"><img class="twitter-icon" src="" alt="twitter-icon"></a>
+					<a class="social-icons__item" href="#"><img class="facebook-icon" src="" alt="facebook-icon"></a>
+					<a class="social-icons__item" href="#"><img class="youtube-icon" src="" alt="youtube-icon"></a>
+				</div>
+				<a class="htmlacademy-copyright" href="https://htmlacademy.ru/intensive/htmlcss"><img src="" alt="htmlacademy-copyright-logo"></a>
 			</div>
-			<div class="search-form__item">
-				<p>дата выезда<input type="text">4 июля 2017<button class="calendar-btn"></button></input></p>
-			</div>
-			<div class="search-form__people-counter">
-				<p>взрослые<button class="less-btn"></button><span class="people-value">2</span><button class="more-btn"></button></p>
-				<p>дети<button class="less-btn"></button><span class="people-value">0</span><button class="more-btn"></button></p>
-			</div>
-			<button class="search-form__button">найти</button>
-		</form>		
-	
-		<div class="footer">
-			<div class="hashtag">#visitsedona</div>
-			<div class="social-icons">
-				<a href="" class="twitter-icon"></a>
-				<a href="" class="facebook-icon"></a>
-				<a href="" class="youtube-icon"></a>
-			</div>
-			<div class="htmlacademy-copyright">
-				<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="" alt=""></a>
-			</div>
-		</div>
 	</div>
 
 </body>
