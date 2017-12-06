@@ -15,18 +15,22 @@
 	
 	<div class="hotel-options">
 		<div class="hotel-options__enviroment">
-			<h2 class="infrastructure__title">Инфраструктура:</h2>
-			<form class="infrastructure" action="" method="post">
-				<input class="infrastructure__option" type="checkbox" name="swimming-pool" value="swimming-pool" checked> Бассейн <br>
-				<input class="infrastructure__option" type="checkbox" name="parking" value="parking"> Парковка <br>
-				<input class="infrastructure__option" type="checkbox" name="wi-fi" value="wi-fi"> wi-fi <br>			
-			</form>			
-			<h2 class="infrastructure__title">Тип жилья:</h2>
-			<form class="hotel-type" action="" method="post">
-				<input class="hotel-type__option" type="checkbox" name="hotel" value="hotel" checked> гостиница <br>
-				<input class="hotel-type__option" type="checkbox" name="motel" value="motel" checked> мотель <br>
-				<input class="hotel-type__option" type="checkbox" name="apartaments" value="apartaments" checked> апартаменты <br>			
-			</form>
+			<div class="infrastructure">
+				<h2 class="infrastructure__title">Инфраструктура:</h2>
+				<form class="infrastructure-form" action="" method="post">
+					<input class="infrastructure-form__option" type="checkbox" name="swimming-pool" value="swimming-pool" checked> Бассейн <br>
+					<input class="infrastructure-form__option" type="checkbox" name="parking" value="parking"> Парковка <br>
+					<input class="infrastructure-form__option" type="checkbox" name="wi-fi" value="wi-fi"> wi-fi <br>			
+				</form>			
+			</div>
+			<div class="infrastructure">
+				<h2 class="infrastructure__title">Тип жилья:</h2>
+				<form class="hotel-type" action="" method="post">
+					<input class="hotel-type__option" type="checkbox" name="hotel" value="hotel" checked> гостиница <br>
+					<input class="hotel-type__option" type="checkbox" name="motel" value="motel" checked> мотель <br>
+					<input class="hotel-type__option" type="checkbox" name="apartaments" value="apartaments" checked> апартаменты <br>			
+				</form>
+			</div>	
 		</div>
 		<div class="hotel-options__payment">
 			<h2 class="day-price__title">Стоимость в сутки(р):</h2>
@@ -44,7 +48,7 @@
 	<div class="hotels-window">
 		<div class="hotels-window__header"> <!-- в этом блоке затрудняюсь с наименованиями -->
 			<div class="hotels-window__sorting"> 
-				<h2 class="hotels-window__title">Найдено:</h2>
+				<p class="hotels-window__title">Найдено:<span class="hotel-search-value">3</:span></p>
 				<div class="sort-options">
 					<span class="sort-options__title">Сортировка:</span>
 					<a class="sort-options__item sort-options--active" href="#">по цене</a>
@@ -52,9 +56,9 @@
 					<a class="sort-options__item" href="#">по рейтингу</a>
 				</div>
 			</div>
-			<div class="hotels-window__movelist-btn">
-				<button class="scroll-btn up-btn scroll-btn--active"></button>
-				<button class="scroll-btn down-btn"></button>
+			<div class="hotels-window__sortlist-btn">
+				<button class="sort-btn up-btn sort-btn--active"></button>
+				<button class="sort-btn down-btn"></button>
 			</div>
 		</div>
 		<div class="hotels-list">
@@ -65,11 +69,11 @@
 						<h2 class="hotels-list__title">amara resort &amp; spa</h2>
 						<div class="hotels-list__short-info">
 							<span class="hotels-list__type">гостиница</span>
-							<a class="hotels-list__description-btn" href="#">подробнее</a>
+							<a class="hotels-list__description-btn" href="#">подробнее</a><!-- а это не кнопка на pop-up window? -->
 						</div>
 						<div class="hotels-list__short-info">
 							<span class="hotels-list__price">от 4000 р.</span>
-							<a class="hotels-list__order-btn" href="#">забронировать</a>
+							<a class="hotels-list__order-btn" href="#">забронировать</a> <!-- а это не кнопка на pop-up window? -->
 						</div>
 					</div>
 				</div>
