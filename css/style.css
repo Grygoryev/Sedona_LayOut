@@ -1,0 +1,59 @@
+@font-face {
+	font-family: 'PT Sans';
+	font-style: normal;
+	src: local 'PT Sans',
+		url('../fonts/ptsans.woff') format('woff'),
+		url('../fonts/ptsans.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'PT Sans';
+	font-style: bold;
+	src: local 'PT Sans',
+		url('../fonts/ptsansbold.woff') format('woff'),
+		url('../fonts/ptsansbold.woff2') format('woff2');
+}
+
+body {
+	width: 1200px;
+	margin: 0 auto;
+	font-family: 'ptsans', 'Times New Roman', sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.logo-img {
+	position: absolute;
+	top: 0;
+	left: 44.5%;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center; 
+	height: 56px;
+	padding: 0 72px;
+	font-family: 'ptsansbold', sans-serif; 
+	background-color: orange;
+}
+
+.menu__link:nth-child(2) {
+	margin-right: 300px;
+}
+
+.menu__link {
+	text-decoration: none;
+}
+
+.intro {
+	background-image: url('../img/intro/intro-background.jpg');
+	height: 510px;
+	background-size: cover;
+}
+
+.intro__text {
+	display: block;
+	margin: 0 auto;
+	padding-top: 77px;
+}

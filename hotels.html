@@ -6,35 +6,52 @@
 </head>
 <body>
 	<nav class="menu">
-			<a class="menu__link">Информация</a>
-			<a class="menu__link">Фото и видео</a>
-			<a class="menu__link">Карта штата</a>
+			<a class="menu__link" href="#">Информация</a>
+			<a class="menu__link" href="#">Фото и видео</a>
+			<a class="menu__link" href="#">Карта штата</a>
 			<a class="menu__link" href="hotels.html">Гостиницы</a>
 	</nav>
 	<a href="index.html"><img class="logo-img" src="" alt="organisation-logo"></a>
 	
 	<div class="hotel-options">
 		<div class="hotel-options__enviroment">
-			<div class="infrastructure">
-				<h2 class="infrastructure__title">Инфраструктура:</h2>
+			<fieldset class="infrastructure">
+				<legend class="infrastructure__title">Инфраструктура:</legend>
 				<form class="infrastructure-form" action="" method="post">
-					<input class="infrastructure-form__option" type="checkbox" name="swimming-pool" value="swimming-pool" checked> Бассейн <br>
-					<input class="infrastructure-form__option" type="checkbox" name="parking" value="parking"> Парковка <br>
-					<input class="infrastructure-form__option" type="checkbox" name="wi-fi" value="wi-fi"> wi-fi <br>			
-				</form>			
-			</div>
-			<div class="infrastructure">
-				<h2 class="infrastructure__title">Тип жилья:</h2>
-				<form class="hotel-type" action="" method="post">
-					<input class="hotel-type__option" type="checkbox" name="hotel" value="hotel" checked> гостиница <br>
-					<input class="hotel-type__option" type="checkbox" name="motel" value="motel" checked> мотель <br>
-					<input class="hotel-type__option" type="checkbox" name="apartaments" value="apartaments" checked> апартаменты <br>			
-				</form>
-			</div>	
+						<div class="infrastructure-form__option">
+							<label for="swimming-pool"></label>
+							<input class="infrastructure-form__input" type="checkbox" name="infrastructure" id="swimming-pool" value="swimming-pool" checked> Бассейн
+						</div>
+						<div class="infrastructure-form__option">
+							<label for="parking"></label>
+							<input class="infrastructure-form__input" type="checkbox" name="infrastructure" id="parking" value="parking"> Парковка
+						</div>
+						<div class="infrastructure-form__option">
+							<label for="wi-fi"></label>
+							<input class="infrastructure-form__input" type="checkbox" name="infrastructure" id="wi-fi" value="wi-fi"> wi-fi		
+						</div>					
+			</fieldset>
+			<fieldset class="infrastructure">
+				<legend class="infrastructure__title">Тип жилья:</legend>			
+					<div class="hotel-type__option">
+						<label for="hotel">
+							<input class="hotel-type__input" type="checkbox" name="hotel-type" id="hotel" value="hotel" checked> гостиница
+						</label>
+					</div>
+					<div class="hotel-type__option">
+						<label for="motel">
+							<input class="hotel-type__input" type="checkbox" name="hotel-type" id="motel" value="motel" checked> мотель
+						</label>
+					</div>
+					<div class="hotel-type__option">
+						<label for="apartaments">
+							<input class="hotel-type__input" type="checkbox" name="hotel-type" id="apartaments" value="apartaments" checked> апартаменты
+						</label>
+					</div>						 		
+			</fieldset>	
 		</div>
 		<div class="hotel-options__payment">
-			<h2 class="day-price__title">Стоимость в сутки(р):</h2>
-			<form class="day-price" action="" method="post">
+			<h2 class="day-price__title">Стоимость в сутки(р):</h2>		
 				<div class="cost-level">
 					<input class="cost-level__item" type="text" name="quantity" min="0" value="от 0">					
 					<input class="cost-level__item" type="text" name="quantity" value="до 3000">
@@ -149,9 +166,9 @@
 	<div class="footer">
 		<a class="hashtag" href="#">#visitsedona</a>
 		<div class="social-icons">
-			<a class="social-icons__item" href="#"><img class="twitter-icon" src="" alt="twitter-icon"></a>
-			<a class="social-icons__item" href="#"><img class="facebook-icon" src="" alt="facebook-icon"></a>
-			<a class="social-icons__item" href="#"><img class="youtube-icon" src="" alt="youtube-icon"></a>
+			<a class="social-icons__item" href="#"></a>
+			<a class="social-icons__item" href="#"></a>
+			<a class="social-icons__item" href="#"></a>
 		</div>
 		<a class="htmlacademy-copyright" href="https://htmlacademy.ru/intensive/htmlcss"><img src="" alt="htmlacademy-copyright-logo"></a>
 	</div>
