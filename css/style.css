@@ -63,25 +63,19 @@ h1, h2, p {
 
 .intro {
 	background-image: url('../img/intro/intro-background.jpg');
-	height: 510px;
+	height: 508px;
 	background-size: cover;
 	position: relative;
 	margin-bottom: 65px;
 }
 
-.pseudo__intro {
-	position: absolute;
-	bottom: 0;
-}
-
-/*.intro:after { ----- пока что не удалось реализовать через 
-	content: ""; ----- :after, временно вставил как img
-	height: 200px;
-	background-image: url('..img/intro/pseudo-intro.png');
-	z-index: 2;
+.intro:after {
+	content: url('../img/intro/pseudo-intro.png');
+	z-index: 2000;
 	position: relative;
-	top: 20px;
-}*/
+	bottom: -23px;
+	display: block;
+}
 
 .intro__text {
 	display: block;
@@ -287,40 +281,58 @@ h1, h2, p {
 
 .footer {
 	height: 120px;
-	background-color: rgba(0,0,255 0.5); 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(255,255,255, 0.8); 
 	z-index: 1;
 	position: relative;
+	/*border: 5px solid black;*/
 }
 
 .footer__container {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding: 0 101px 0 133px;
 }
 
 .hashtag {
+	color: black;
 	font-size: 21px;
 	font-family: 'ptsansbold', 'Arial', sans-serif;	
+	text-decoration: none;
 	line-height: 26px;	
 }	
 
-.social-icons__item {
+.social-icons {
+	display: flex;
+	justify-content: space-between;
+	width: 149px;
+}
+
+.social-icons__twitter { 
+	background: url('../img/twitter.svg') center center no-repeat;
+	background-color: #81b3d2;
 	height: 48px;
 	width: 46px;
 }
 
-.social-icons__twitter {
-	background-image: url('../img/twitter.svg');
-}
-
 .social-icons__youtube {
-	background-image: url('../img/youtube.svg');
+	background: url('../img/youtube.svg') center center no-repeat;
+	background-color: #81b3d2;
+	height: 48px;
+	width: 46px;
 }
 
-.social-icons__twitter {
-	background-image: url('../img/fb-icon.svg');
+.social-icons__facebook {
+	background: url('../img/fb-icon.svg') center center no-repeat;
+	background-color: #81b3d2;
+	height: 48px;
+	width: 46px;
 }
 
 .copyright {
 	display: flex;
+	width: 150px;
 }
