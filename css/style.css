@@ -216,8 +216,9 @@ h1, h2, p {
 
 .google-map {
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	z-index: 0;
+	height: 594px;
 }
 
 .search-form {
@@ -280,17 +281,18 @@ h1, h2, p {
 }
 
 .footer {
-	height: 120px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	background-color: rgba(255,255,255, 0.8); 
 	z-index: 1;
 	position: relative;
-	/*border: 5px solid black;*/
+	bottom: -79px;
 }
 
 .footer__container {
+	width: 1200px;
+	height: 120px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -300,7 +302,8 @@ h1, h2, p {
 .hashtag {
 	color: black;
 	font-size: 21px;
-	font-family: 'ptsansbold', 'Arial', sans-serif;	
+	font-family: 'ptsansbold', 'Arial', sans-serif;
+	font-weight: bold;	
 	text-decoration: none;
 	line-height: 26px;	
 }	
@@ -332,7 +335,18 @@ h1, h2, p {
 	width: 46px;
 }
 
-.copyright {
+.htmlacademy-copyright {
 	display: flex;
-	width: 150px;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: black;
+	font-size: 14px;
+	width: 225px;
+	height: 42px;
+}
+
+.htmlacademy-copyright-logo {
+	width: 115px;
+	padding-left: 10px;
 }
