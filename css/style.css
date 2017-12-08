@@ -25,7 +25,7 @@ body {
 	text-transform: uppercase;
 }
 
-h1, h2, p {
+h1, h2, p, input {
 	margin: 0;
 	padding: 0;
 }
@@ -157,7 +157,7 @@ h1, h2, p {
 
 .advantages {
 	display: flex;
-	margin-bottom: 58px;
+	margin-bottom: 52px; /* в макете 58px, ниже описываю проблему*/
 }
 
 .advantages__item {
@@ -187,7 +187,7 @@ h1, h2, p {
 .search-window__title {
 	font-size: 30px;
 	font-family: 'ptsansbold', 'Arial', sans-serif;
-	margin-bottom: 39px;
+	margin-bottom: 24px; /*в макете 38px*/
 }
 
 .search-window__span {
@@ -196,7 +196,10 @@ h1, h2, p {
 	font-family: 'ptsans', 'Arial', sans-serif;
 	line-height: 24px;
 	text-align: center;
-	margin-bottom: 54px;
+	margin-bottom: 45px; /* в макете отступ 54, но для 
+							того, чтобы в веб был тоже такой отступ
+							приходится задать его, как 45. 
+							Почему? Ведь h1,h2 и p = 0 */
 }
 
 .search-window__js-button {
@@ -229,22 +232,70 @@ h1, h2, p {
     margin: 0 auto;
     width: 568px;
     height: 395px;
-    background: #eeeeee;
+    background-color: white;
     z-index: 2;
     position: relative;
     top: 0;
 }
 
+.search-form__containter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+}
+
+.more-btn, .less-btn, .calendar-btn, .people-counter__input, 
+.search-form__input {
+	font-size: 14px;
+	font-family: 'ptsansbold', 'Arial', sans-serif;
+	border: none;
+	border-radius: 0;
+	background-color: #f2f2f2;
+	height: 38px;
+	width: 35px;
+}
+
 .search-form__text {
 	font-size: 14px;
 	font-family: 'ptsansbold', sans-serif;
+	line-height: 0;
+} 
+
+.adults-counter, .children-counter {
+	display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.search-form__input-div {
+	background-color: #f2f2f2;
+	height: 38px;
+	width: 346px;
+}
+
+.search-form__item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 460px;
 }
 
 .search-form__input {
 	font-size: 14px;
 	font-family: 'ptsansbold', sans-serif;	
-	width: 345px;
-	height: 38px;
+	width: 305px;
+	padding-left: 12px;
+}
+
+.calendar-btn {
+    height: 22px;
+    width: 22px;
+    background: url(../img/calendar.svg) center center no-repeat;
+    background-color: transparent;
+    vertical-align: middle;
+    position: relative;
+    right: 9px;
 }
 
 .search-form__people-quantity {
@@ -256,22 +307,26 @@ h1, h2, p {
 
 .adults-form, .children-form {
 	display: flex;
-	justify-content: space-between;
+	align-items: center;
 }
 
-.people-counter {
-	display: flex;
-}
 
 .people-counter__input {
-	font-size: 14px;
-	font-family: 'ptsansbold', 'Arial', sans-serif;		
-	height: 38px;
-	width: 35px;
+	text-align: center;
+}
+
+.more-btn { 
+	background: url('../img/icon-up-dir.svg') center center no-repeat; 
+	background-color: #f2f2f2;
+}
+
+.less-btn { 
+	background: url('../img/icon-down-dir.svg') center center no-repeat; 
+	background-color: #f2f2f2;
 }
 
 .search-form__button {
-	width: 458px;
+	width: 462px;
 	height: 58px;
 	font-family: 'ptsansbold', 'Arial', sans-serif;	
 	font-size: 21px;
@@ -296,7 +351,7 @@ h1, h2, p {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 101px 0 133px;
+	padding: 5px 101px 0 133px;
 }
 
 .hashtag {
