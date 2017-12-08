@@ -315,14 +315,21 @@ h1, h2, p, input {
 	text-align: center;
 }
 
-.more-btn { 
-	background: url('../img/icon-up-dir.svg') center center no-repeat; 
+.more-btn, .less-btn { /*странно, значок - располагается 
+					ниже чем значок + */
+	font-family: 'ptsansbold', 'Arial', sans-serif;	
 	background-color: #f2f2f2;
+	color: #a9a9a9;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.more-btn { 
+	/*background: url('../img/icon-up-dir.svg') center center no-repeat; */
 }
 
 .less-btn { 
-	background: url('../img/icon-down-dir.svg') center center no-repeat; 
-	background-color: #f2f2f2;
+	/*background: url('../img/icon-down-dir.svg') center center no-repeat; */
 }
 
 .search-form__button {
@@ -333,6 +340,7 @@ h1, h2, p, input {
 	text-transform: uppercase;
 	color: white;
 	background-color: #81b3d2;
+	border: 0;
 }
 
 .footer {
