@@ -17,58 +17,62 @@
 	</div>
 			
 	<div class="hotel-options">
-		<div class="hotel-options__enviroment">
-			<fieldset class="infrastructure">
-				<legend class="infrastructure__title">Инфраструктура:</legend>
-				<form class="infrastructure-form" action="" method="post">
-						<div class="infrastructure-form__option">
-							<label for="swimming-pool"></label>
-							<input class="infrastructure-form__input" type="checkbox" name="infrastructure" id="swimming-pool" value="swimming-pool" checked> Бассейн
-						</div>
-						<div class="infrastructure-form__option">
-							<label for="parking"></label>
-							<input class="infrastructure-form__input" type="checkbox" name="infrastructure" id="parking" value="parking"> Парковка
-						</div>
-						<div class="infrastructure-form__option">
-							<label for="wi-fi"></label>
-							<input class="infrastructure-form__input" type="checkbox" name="infrastructure" id="wi-fi" value="wi-fi"> wi-fi		
-						</div>					
-			</fieldset>
-			<fieldset class="infrastructure">
-				<legend class="infrastructure__title">Тип жилья:</legend>			
+		<form class="infrastructure-form" action="" method="post">
+			<div class="hotel-options__enviroment">
+				<fieldset class="infrastructure">
+					<legend class="infrastructure__title">Инфраструктура:</legend>
+					<div class="infrastructure-form__option">
+						<input class="infrastructure-form__input" type="checkbox" name="infrastructure" id="swimming-pool" value="swimming-pool" checked>
+						<label for="swimming-pool"> Бассейн</label>
+					</div>
+					<div class="infrastructure-form__option">
+						<input class="infrastructure-form__input" type="checkbox" name="infrastructure" id="parking" value="parking"> 
+						<label for="parking">Парковка</label>
+					</div>
+					<div class="infrastructure-form__option">
+						<input class="infrastructure-form__input" type="checkbox" name="infrastructure" id="wi-fi" value="wi-fi">	
+						<label for="wi-fi">wi-fi</label>
+					</div>					
+				</fieldset>
+				<fieldset class="infrastructure">
+					<legend class="infrastructure__title">Тип жилья:</legend>			
 					<div class="hotel-type__option">
-						<label for="hotel">
-							<input class="hotel-type__input" type="checkbox" name="hotel-type" id="hotel" value="hotel" checked> гостиница
-						</label>
+						<input class="hotel-type__input" type="checkbox" name="hotel-type" id="hotel" value="hotel" checked> 
+						<label for="hotel"> гостиница </label>
 					</div>
 					<div class="hotel-type__option">
-						<label for="motel">
-							<input class="hotel-type__input" type="checkbox" name="hotel-type" id="motel" value="motel" checked> мотель
-						</label>
+						<input class="hotel-type__input" type="checkbox" name="hotel-type" id="motel" value="motel" checked> 
+						<label for="motel"> мотель</label>
 					</div>
 					<div class="hotel-type__option">
-						<label for="apartaments">
-							<input class="hotel-type__input" type="checkbox" name="hotel-type" id="apartaments" value="apartaments" checked> апартаменты
-						</label>
+						<input class="hotel-type__input" type="checkbox" name="hotel-type" id="apartaments" value="apartaments" checked> 
+						<label for="apartaments"> апартаменты </label>
 					</div>						 		
-			</fieldset>	
-		</div>
-		<div class="hotel-options__payment">
-			<h2 class="day-price__title">Стоимость в сутки(р):</h2>		
+				</fieldset>
+			</div>
+			<div class="hotel-options__payment">
+				<h2 class="day-price__title">Стоимость в сутки(р):</h2>
 				<div class="cost-level">
-					<input class="cost-level__item" type="text" name="quantity" min="0" value="от 0">					
-					<input class="cost-level__item" type="text" name="quantity" value="до 3000">
+					<input class="cost-level__min-value" type="text" name="quantity" min="0" value="от 0">
+					<!-- <div class="divider"></div>	 -->			
+					<input class="cost-level__max-value" type="text" name="quantity" value="до 3000">
 				</div>
-				<input class="cost-slider" type="range" name="quantity" min="0" max="10">
-			</form>
-			<button class="submit-btn">Показать</button> 		
-		</div>
+				<div class="range">
+					<div class="range__bar">
+						<div class="range__selected"></div>
+					</div>
+					<div class="toggle toggle-min"></div>
+					<div class="toggle toggle-max"></div>
+				</div>
+				<button class="submit-btn">Показать</button> 
+			</div>	
+		</form>		
 	</div>
 
 	<div class="hotels-window">
-		<div class="hotels-window__header"> <!-- в этом блоке затрудняюсь с наименованиями -->
+		<div class="hotels-window__header"> 
 			<div class="hotels-window__sorting"> 
-				<p class="hotels-window__title">Найдено:<span class="hotel-search-value">3</:span></p>
+				<p class="hotels-window__title">Найдено:<span class="hotel-search-value"> 3</span></p>
 				<div class="sort-options">
 					<span class="sort-options__title">Сортировка:</span>
 					<a class="sort-options__item sort-options--active" href="#">по цене</a>
@@ -77,32 +81,32 @@
 				</div>
 			</div>
 			<div class="hotels-window__sortlist-btn">
-				<button class="sort-btn up-btn sort-btn--active"></button>
-				<button class="sort-btn down-btn"></button>
+				<button class="up-btn sort-btn--active"></button>
+				<button class="down-btn"></button>
 			</div>
 		</div>
 		<div class="hotels-list">
 			<div class="hotels-list__item">
 				<div class="hotels-list__info">
-					<img class="hotels-list__photo" src="" alt="hotel-photo">
+					<img class="hotels-list__photo" src="img/amara-hotel.jpg" alt="hotel-photo">
 					<div class="hotels-list__description">
 						<h2 class="hotels-list__title">amara resort &amp; spa</h2>
 						<div class="hotels-list__short-info">
 							<span class="hotels-list__type">гостиница</span>
-							<a class="hotels-list__description-btn" href="#">подробнее</a><!-- а это не кнопка на pop-up window? -->
+							<a class="hotels-list__description-btn" href="#">подробнее</a>
 						</div>
 						<div class="hotels-list__short-info">
 							<span class="hotels-list__price">от 4000 р.</span>
-							<a class="hotels-list__order-btn" href="#">забронировать</a> <!-- а это не кнопка на pop-up window? -->
+							<a class="hotels-list__order-btn" href="#">забронировать</a> 
 						</div>
 					</div>
 				</div>
 				<div class="hotels-list__rating">
 					<div class="stars-bar">
-						<img class="stars-bar__icon" src="" alt="star-icon">
-						<img class="stars-bar__icon" src="" alt="star-icon">
-						<img class="stars-bar__icon" src="" alt="star-icon">
-						<img class="stars-bar__icon" src="" alt="star-icon">
+						<img class="stars-bar__icon" src="img/star.svg" alt="star-icon">
+						<img class="stars-bar__icon" src="img/star.svg" alt="star-icon">
+						<img class="stars-bar__icon" src="img/star.svg" alt="star-icon">
+						<img class="stars-bar__icon" src="img/star.svg" alt="star-icon">
 					</div>
 					<div class="rating-number">
 						<p class="rating-number__title">рейтинг:
@@ -112,7 +116,7 @@
 			</div>
 			<div class="hotels-list__item">
 				<div class="hotels-list__info">
-					<img class="hotels-list__photo" src="" alt="hotel-photo">
+					<img class="hotels-list__photo" src="img/desert-hotel.jpg" alt="hotel-photo">
 					<div class="hotels-list__description">
 						<h2 class="hotels-list__title">desert quail inn</h2>
 						<div class="hotels-list__short-info">
@@ -127,9 +131,9 @@
 				</div>
 				<div class="hotels-list__rating">
 					<div class="stars-bar">
-						<img class="stars-bar__icon" src="" alt="star-icon">
-						<img class="stars-bar__icon" src="" alt="star-icon">
-						<img class="stars-bar__icon" src="" alt="star-icon">
+						<img class="stars-bar__icon" src="img/star.svg" alt="star-icon">
+						<img class="stars-bar__icon" src="img/star.svg" alt="star-icon">
+						<img class="stars-bar__icon" src="img/star.svg" alt="star-icon">
 					</div>
 					<div class="rating-number">
 						<p class="rating-number__title">рейтинг:
@@ -139,7 +143,7 @@
 			</div>
 			<div class="hotels-list__item">
 				<div class="hotels-list__info">
-					<img class="hotels-list__photo" src="" alt="hotel-photo">
+					<img class="hotels-list__photo" src="img/villas-hotel.jpg" alt="hotel-photo">
 					<div class="hotels-list__description">
 						<h2 class="hotels-list__title">villas at poco diablo</h2>
 						<div class="hotels-list__short-info">
@@ -154,8 +158,8 @@
 				</div>
 				<div class="hotels-list__rating">
 					<div class="stars-bar">
-						<img class="stars-bar__icon" src="" alt="star-icon">
-						<img class="stars-bar__icon" src="" alt="star-icon">
+						<img class="stars-bar__icon" src="img/star.svg" alt="star-icon">
+						<img class="stars-bar__icon" src="img/star.svg" alt="star-icon">
 					</div>
 					<div class="rating-number">
 						<p class="rating-number__title">рейтинг:

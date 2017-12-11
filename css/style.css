@@ -7,19 +7,17 @@
 }
 
 @font-face {
-	font-family: 'PT Sans';
+	font-family: 'PT Sans Bold';
 	font-style: bold;
-	src: local 'PT Sans',
+	src:
 		url('../fonts/ptsansbold.woff') format('woff'),
 		url('../fonts/ptsansbold.woff2') format('woff2');
 }
 
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
-
 body {
 	width: 1200px;
 	margin: 0 auto;
-	font-family: 'ptsans', 'Arial', sans-serif;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 14px;
 	color: black;
 	text-transform: uppercase;
@@ -48,7 +46,7 @@ h1, h2, p, input {
 	align-items: center; 
 	height: 56px;
 	padding: 0 72px;
-	font-family: 'ptsansbold', sans-serif; 
+	font-family: 'PT Sans Bold', sans-serif; 
 }
 
 .menu__link:nth-child(2) {
@@ -62,7 +60,7 @@ h1, h2, p, input {
 
 .intro {
 	background-image: url('../img/intro/intro-background.jpg');
-	height: 508px;
+	min-height: 508px;
 	margin-bottom: 65px;
 }
 
@@ -88,7 +86,7 @@ h1, h2, p, input {
 .content__title {
     width: 600px;
     font-size: 21px;
-    font-family: 'ptsansbold', 'Arial', sans-serif;
+    font-family: 'PT Sans Bold', 'Arial', sans-serif;
     line-height: 26px;
     text-align: center;
     margin-bottom: 26px;
@@ -96,7 +94,7 @@ h1, h2, p, input {
 
 .content__small-title {
 	width: 552px;
-	font-family: 'ptsans', 'Arial', sans-serif;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 26px;
@@ -105,7 +103,13 @@ h1, h2, p, input {
 }
 
 .gallery {
-	display: flex;	
+	display: flex;
+	max-height: 258px;	
+}
+
+.gallery__title, .features__title, .advantages__title {
+	font-size: 21px;
+    font-family: 'PT Sans Bold', 'Arial', sans-serif;
 }
 
 .gallery__item {
@@ -113,10 +117,14 @@ h1, h2, p, input {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 258px;
+	min-height: 258px;
 	width: 400px;
 	color: white;
 	background-color: #81b3d2;
+}
+
+.gallery__item--hover:hover {
+	background: rgba(200,30,50,0.5);
 }
 
 .gallery__text {
@@ -126,6 +134,7 @@ h1, h2, p, input {
 
 .features {
 	display: flex;
+	align-items: baseline;
 }
 
 .features__item {
@@ -133,7 +142,8 @@ h1, h2, p, input {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 330px;
+	/*min-height: 330px;*/
+	padding: 61px 0 88px 0;
 	width: 33.3333333%;
 }
 
@@ -163,8 +173,13 @@ h1, h2, p, input {
 	justify-content: center;
 	color: black;
 	background-color: #eeeeee;
-	height: 256px;
+	/*min-height: 256px;*/
+	padding: 50px 0px 65px 0px;
 	width: 33.3333333%;
+}
+
+.advantages__item--hover:hover {
+	background-color: rgba(255,255,30,0.2);
 }
 
 .advanatges__text {
@@ -181,14 +196,14 @@ h1, h2, p, input {
 
 .search-window__title {
 	font-size: 30px;
-	font-family: 'ptsansbold', 'Arial', sans-serif;
+	font-family: 'PT Sans Bold', 'Arial', sans-serif;
 	margin-bottom: 24px; /*в макете 38px*/
 }
 
 .search-window__span {
 	width: 490px;
 	font-size: 14px;
-	font-family: 'ptsans', 'Arial', sans-serif;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 	line-height: 24px;
 	text-align: center;
 	margin-bottom: 45px; /* в макете отступ 54, но для 
@@ -202,7 +217,7 @@ h1, h2, p, input {
 	height: 86px;
 	font-size: 21px;
 	text-transform: uppercase;
-	font-family: 'ptsansbold', 'Arial', sans-serif;
+	font-family: 'PT Sans Bold', 'Arial', sans-serif;
 	text-align: center;
 	color: white;
 	background-color: #766357;
@@ -243,7 +258,7 @@ h1, h2, p, input {
 .more-btn, .less-btn, .calendar-btn, .people-counter__input, 
 .search-form__input {
 	font-size: 14px;
-	font-family: 'ptsansbold', 'Arial', sans-serif;
+	font-family: 'PT Sans Bold', 'Arial', sans-serif;
 	border: none;
 	border-radius: 0;
 	background-color: #f2f2f2;
@@ -253,14 +268,14 @@ h1, h2, p, input {
 
 .search-form__text {
 	font-size: 14px;
-	font-family: 'ptsansbold', sans-serif;
+	font-family: 'PT Sans Bold', sans-serif;
 	line-height: 0;
 } 
 
 .adults-counter, .children-counter {
 	display: flex;
     align-items: center;
-    margin-left: 30px;
+    margin-left: 41px;
 }
 
 .search-form__item {
@@ -278,7 +293,7 @@ h1, h2, p, input {
 
 .search-form__input {
 	font-size: 14px;
-	font-family: 'ptsansbold', sans-serif;	
+	font-family: 'PT Sans Bold', sans-serif;	
 	width: 305px;
 	padding-left: 12px;
 }
@@ -311,7 +326,7 @@ h1, h2, p, input {
 
 .more-btn, .less-btn { /*странно, значок '-' располагается 
 					ниже чем значок '+' */
-	font-family: 'ptsansbold', 'Arial', sans-serif;	
+	font-family: 'PT Sans Bold', 'Arial', sans-serif;	
 	background-color: #f2f2f2;
 	color: #a9a9a9;
 	font-size: 16px;
@@ -329,7 +344,7 @@ h1, h2, p, input {
 .search-form__button {
 	width: 462px;
 	height: 58px;
-	font-family: 'ptsansbold', 'Arial', sans-serif;	
+	font-family: 'PT Sans Bold', 'Arial', sans-serif;	
 	font-size: 21px;
 	text-transform: uppercase;
 	color: white;
@@ -359,7 +374,7 @@ h1, h2, p, input {
 .hashtag {
 	color: black;
 	font-size: 21px;
-	font-family: 'ptsansbold', 'Arial', sans-serif;
+	font-family: 'PT Sans Bold', 'Arial', sans-serif;
 	font-weight: bold;	
 	text-decoration: none;
 	line-height: 26px;	
@@ -406,4 +421,256 @@ h1, h2, p, input {
 .htmlacademy-copyright-logo {
 	width: 115px;
 	padding-left: 10px;
+}
+
+/********* hotels.index *********/
+
+.hotel-options {
+	display: flex;
+	justify-content: space-between;
+	background-image: url('../img/hotel-options__background.jpg');
+	background-size: cover;
+	/*height: 217px;*/
+	padding: 27px 72px 0px 58px;
+	margin-bottom: 32px;
+}
+
+.hotel-options__enviroment {
+	display: flex;
+	justify-content: space-between;
+	width: 400px;	
+}
+
+.infrastructure {
+	border: none;
+	color: white;
+	margin-right: 92px;	
+}
+
+.infrastructure-form {
+	display: flex;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+.infrastructure__title {
+	font-size: 16px;
+	font-family: 'PT Sans Bold', 'Arial', sans-serif;
+	margin-bottom: 21px;
+}
+
+.infrastructure-form__option {
+	font-size: 14px;
+	font-family: 'PT Sans', 'Arial', sans-serif;
+}
+
+.hotel-type__option {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/*min-height: 90px;*/
+}
+
+input[type="checkbox"] {
+ 	display: none;
+}
+
+input[type="checkbox"] + label {
+	position: relative;
+
+	display: block;
+	margin-bottom: 23px;
+	padding-left: 35px;
+
+	font-size: 14px;
+	font-family: "PT Sans", 'Arial', sans-serif;
+	line-height: 21px;
+	color: white;
+
+	cursor: pointer;
+}
+
+input[type="checkbox"] + label:before {
+	content: url('../img/checkbox-off.svg');
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	font-size: 14px;
+	font-family: "PT Sans", 'Arial', sans-serif;
+	color: white;
+}
+
+input[type="checkbox"]:checked + label::before {  
+ 	content: url('../img/checkbox-on.svg');
+}
+
+.day-price__title {
+	font-size: 16px;
+	font-family: 'PT Sans Bold', 'Arial', sans-serif;
+	color: white;
+	margin-bottom: 12px;
+}
+
+.submit-btn, .cost-level__min-value, .cost-level__max-value  {
+	background: transparent;
+	border: 2px solid white;
+	border-radius: 2px;
+	font-size: 14px;
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	min-height: 30px;
+}
+
+.cost-level {
+	position: relative;
+}
+
+.cost-level:after {
+	display: inline-block;
+	content: "";
+	background: white;
+	height: 24px;
+	width: 2px;
+    position: absolute;
+    right: 158px;
+    top: 5px;
+}
+.cost-level__min-value {
+	border-right: none;
+	margin-bottom: 20px;
+	width: 159px;
+}
+
+/*.divider {
+    display: inline-block;
+    content: "";
+    background: white;
+    height: 24px;
+    width: 2px;
+    position: absolute;
+    top: 5px;
+}*/
+
+.cost-level__max-value {
+	border-left: none;
+	margin-left: -6px;
+	width: 159px;
+}
+
+.range {
+	position: relative;
+}
+
+.range__bar {
+	width: 100%;
+	background-color: #ababab;
+	height: 2px;
+	margin-bottom: 34px;
+}
+
+.range__selected {
+	width: 80%;
+	background-color: white;
+	height: 2px;
+}
+
+.toggle {
+	width: 4px;
+	height: 4px;
+	background: #ababab;
+	border-radius: 50%;
+	border: 8px solid white;
+	box-shadow: 0 1px 1px 0 #cfcfcf;
+}
+
+.toggle-min {
+	position: absolute;
+	top: -8px;
+	left: 0px;
+}
+
+.toggle-max {
+	position: absolute;
+	top: -8px;
+	left: 80%;
+} 
+
+.submit-btn {
+	width: 137px;
+	line-height: 0;
+	padding: 15px 0;
+	margin: 0 auto;
+    display: block;
+}
+
+.hotels-window {
+	padding: 0 72px;
+}
+
+.hotels-window__header, .hotels-window__sorting {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.hotels-window__title {
+	font-size: 21px;
+	font-family: 'PT Sans Bold', 'Arial', sans-serif;
+	margin-right: 32px;
+	margin-bottom: 36px;
+}
+
+.sort-options {
+	display: flex;
+	justify-content: space-around;
+	font-size: 12px;
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	width: 368px;
+}
+
+.sort-options__title {
+	margin-right: 20px;
+}
+
+.sort-options__item {
+	color: #cacaca;
+	text-decoration-style: dotted;
+	text-decoration-color: #81b3d2;
+}
+
+.sort-options--active {
+	text-decoration: none;
+	color: #81b3d2;
+}
+
+.up-btn, .down-btn {
+	background-color: transparent;
+	border: none;
+	height: 10px;
+	width: 11px;
+}
+
+.up-btn {
+	background: url('../img/icon-up-dir.svg') center no-repeat;
+}
+
+.down-btn {
+	background: url('../img/icon-down-dir.svg') center no-repeat;
+}
+
+.hotels-list__item {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+}
+
+.hotels-list__info {
+	display: flex;
+}
+
+.hotels-list__photo {
+	margin-right: 30px;
 }
