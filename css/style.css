@@ -52,7 +52,7 @@ h1, h2, p, input {
 }
 
 .menu__link:nth-child(2) {
-	margin-right: 300px;
+	margin-right: 258px;
 }
 
 .menu__link {
@@ -216,7 +216,7 @@ h1, h2, p, input {
 
 .search-window__js-button {
 	width: 568px;
-	height: 86px;
+	min-height: 86px;
 	font-size: 21px;
 	text-transform: uppercase;
 	font-family: 'PT Sans Bold', 'Arial', sans-serif;
@@ -230,24 +230,27 @@ h1, h2, p, input {
 }
 
 .google-map {
-	position: absolute;
-	top: 0;
-	z-index: 0;
 	height: 594px;
 }
 
 .search-form {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     width: 568px;
-    height: 395px;
+    min-height: 395px;
     background-color: white;
     z-index: 2;
-    position: relative;
+    position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search-form--show {
+	display: flex;
 }
 
 .search-form__containter {
@@ -360,17 +363,24 @@ h1, h2, p, input {
 	align-items: center;
 	background-color: rgba(255,255,255, 0.8); 
 	z-index: 1;
-	position: relative;
-	bottom: -79px;
+	position: absolute;
+	bottom: 0;
 }
 
+
 .footer__container {
-	width: 1200px;
-	height: 120px;
+    width: 1067px;
+    min-height: 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 133px;
+    /*	width: 1200px;
+	min-height: 120px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
-	padding: 5px 101px 0 133px;
+	padding: 5px 101px 0 133px; */
 }
 
 .hashtag {
@@ -380,12 +390,14 @@ h1, h2, p, input {
 	font-weight: bold;	
 	text-decoration: none;
 	line-height: 26px;	
+	margin-right: 256px;
 }	
 
 .social-icons {
 	display: flex;
 	justify-content: space-between;
 	width: 149px;
+	margin-right: 217px;
 }
 
 .social-icons__twitter { 
@@ -433,8 +445,8 @@ h1, h2, p, input {
 	background-image: url('../img/hotel-options__background.jpg');
 	background-size: cover;
 	/*height: 217px;*/
-	padding: 27px 72px 0px 58px;
-	margin-bottom: 32px;
+	padding: 27px 72px 4px 58px;
+	margin-bottom: 29px;
 }
 
 .hotel-options__enviroment {
