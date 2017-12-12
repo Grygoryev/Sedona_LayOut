@@ -606,7 +606,7 @@ input[type="checkbox"]:checked + label::before {
     display: block;
 }
 
-.hotels-window {
+.hotels-window__header {
 	padding: 0 72px;
 }
 
@@ -664,7 +664,13 @@ input[type="checkbox"]:checked + label::before {
 .hotels-list__item {
 	display: flex;
 	justify-content: space-between;
-	padding: 30px 0;
+	padding: 30px 72px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.hotels-list__item:first-child {
+	border-top: 1px solid #e5e5e5;
+
 }
 
 .hotels-list__info {
@@ -675,9 +681,17 @@ input[type="checkbox"]:checked + label::before {
 	margin-right: 30px;
 }
 
+.hotels-list__description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 90px;
+}
+
 .hotels-list__title {
 	font-size: 21px;
 	font-family: 'PT Sans Bold', 'Arial', sans-serif;
+	line-height: 16px;
 }
 
 .hotels-list__info-btns {
@@ -694,6 +708,8 @@ input[type="checkbox"]:checked + label::before {
 .hotels-list__type, .hotels-list__price {
 	font-size: 14px;
 	font-family: 'PT Sans', 'Arial', sans-serif;
+	line-height: 0;
+	margin-bottom: 23px;
 } 
 
 .hotels-list__description-btn, .hotels-list__order-btn {
@@ -712,4 +728,9 @@ input[type="checkbox"]:checked + label::before {
 .hotels-list__order-btn {
 	background-color: #766357;
 	width: 142px;
+}
+
+.footer--hotels {
+	position: relative;
+	bottom: 0;
 }
