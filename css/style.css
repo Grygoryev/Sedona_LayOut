@@ -674,3 +674,42 @@ input[type="checkbox"]:checked + label::before {
 .hotels-list__photo {
 	margin-right: 30px;
 }
+
+.hotels-list__title {
+	font-size: 21px;
+	font-family: 'PT Sans Bold', 'Arial', sans-serif;
+}
+
+.hotels-list__info-btns {
+	display: flex;
+}
+
+.hotels-list__short-info {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.hotels-list__type, .hotels-list__price {
+	font-size: 14px;
+	font-family: 'PT Sans', 'Arial', sans-serif;
+} 
+
+.hotels-list__description-btn, .hotels-list__order-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+	background-color: #81b3d2;
+	font-size: 14px;
+	font-family: 'PT Sans Bold', 'Arial', sans-serif;
+	width: 110px;
+	height: 27px;
+}
+
+.hotels-list__order-btn {
+	background-color: #766357;
+	width: 142px;
+}
