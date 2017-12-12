@@ -732,6 +732,10 @@ input[type="checkbox"]:checked + label::before {
 	width: 142px;
 }
 
+.stars-bar {
+	text-align: right;
+}
+
 .footer--hotels {
 	position: relative;
 	bottom: 0;
