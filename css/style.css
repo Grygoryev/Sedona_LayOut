@@ -21,6 +21,8 @@ body {
 	font-size: 14px;
 	color: black;
 	text-transform: uppercase;
+
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 h1, h2, p, input {
